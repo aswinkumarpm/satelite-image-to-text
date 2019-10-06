@@ -1,4 +1,4 @@
-django==1.11.6
+django==1.11.23
 djangorestframework
 django-crispy-forms
 pytesseract
