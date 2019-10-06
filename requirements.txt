@@ -1,0 +1,5 @@
+django==1.11.6
+djangorestframework
+django-crispy-forms
+pytesseract
+

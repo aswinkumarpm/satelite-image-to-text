@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0; user-scalable: no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <title>Convert Images to text</title>
+
+    <link rel="stylesheet" type="text/css"
+          href="{% static "L001/consumer/theme/Sam/css/bootstrap/bootstrap.min.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "L001/consumer/theme/Sam/css/compiled/theme_styles.css" %}"/>
+    <link rel="stylesheet" href="{% static "css/custom.css" %}"/>
+</head>
+<body style="background-image:url('{% static "images/test.jpg" %}');background-repeat:no-repeat; ">
+
+        {% block content %}
+        {% endblock %}
+</body>
+</html>

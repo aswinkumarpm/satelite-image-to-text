@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+<div class="text-center-red-color" style="margin-top: 100px;">
+    <p>Welcome {{ user.username|title }}</p>
+    <p><a style="color: red;" href="/logout">Logout</a></p>
+</div>
+    <div class="col-md-6 col-md-offset-3 text-center img-resize-border" style="margin-bottom: 40px; margin-top: 100px; text-align: center;">
+        <h1><em> SATELITE IMAGE TO TEXT CONVERTER</em> </h1>
+        <div class="col-md-12" style="padding-bottom: 25px;">
+            <div class="forms">
+                <!--<form action="{% url 'mapview' %}" method="post" enctype="multipart/form-data" style="font-size: medium;">{% csrf_token %}-->
+                <form action="" method="post" enctype="multipart/form-data" style="font-size: medium;">{% csrf_token %}
+                    {% for field in form %}
+                        <div class="fieldWrapper" style="color:white;">
+                            <input type="hidden" name="latitude" value="{{ latitude }}">
+                            <input type="hidden" name="longitude" value="{{ longitude }}">
+
+
+                            {{ field.label_tag }} <br>
+                            {{ field }}
+                        </div>
+                    {% endfor %}
+                    <button style="background-color: #004E95;
+                    border: none;
+                    color: white;
+                    width: 100px;
+                    padding: 10px 10px;
+                    margin-top: 10px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 12px;" type="submit">Upload
+                    </button>
+                </form>
+            </div>
+        </div>
+                    <div>    <h2>THE INFORMATION IS EXTRACTED FROM IMAGE AND USED FOR FLOOD MAPPING AND DETECTION</h2>
+
+        <h2>The text file includes the text data extracted from satelite-images and it will download as a file.</h2>
+                        </div>
+
+    </div>
+    {% else %}
+    <div class="col-md-6 col-md-offset-3 text-center img-resize-border" style="margin-bottom: 40px; margin-top: 100px; text-align: center;">
+        <h1><em>SATELITE IMAGE TO TEXT CONVERTER</em> </h1>
+        <div class="col-md-12" style="padding-bottom: 25px;">
+            <div class="forms">
+    <h2><a style="color:red;" href="/login">Login</a></h2>
+    <h2><a style="color:red;" href="/register">Register</a></h2>
+            </div>
+            </div>
+            </div>
+    {% endif %}
+{% endblock %}

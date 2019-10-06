@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="col-md-6 col-md-offset-3 text-center img-resize-border" style="margin-bottom: 40px; margin-top: 100px; text-align: center;">
+        <h1><em>SATELITE IMAGE TO TEXT CONVERTER</em> </h1>
+        <div class="col-md-12" style="padding-bottom: 25px;">
+            <div class="forms">
+    <form method="POST">
+        {% csrf_token %}
+        <p>
+            <label>Username</label>
+            <input type="text" name="username">
+        </p>
+        <p>
+            <label>Password</label>
+            <input type="password" name="password">
+        </p>
+        <button type="submit">Login</button>
+    </form>
+            </div>
+            </div>
+            </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+.img-resize-border{
+        border: solid 1px white;
+
+}
+
+.img-resize-border-1{
+        border: solid 1px black;
+
+}
+
+.text-center-red-color{
+text-align : center;
+color: red;
+ font-size: 2em;
+}

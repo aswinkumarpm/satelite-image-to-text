@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+      {% for obj in objects_list %}
+        <div class="row">
+                    {% if obj.photo %}
+                        <a href="{{ obj.photo.url }}"><img  src='{{ obj.photo.url }}' class='img-responsive'/></a>
+                    {% endif %}
+
+        </div>
+      {% if obj.text %}
+            <p style="text-align: justify;">{{obj.text}}</p>
+            {% else %}
+            <p style="text-align: justify;">Text Data Not Found</p>
+                    {% endif %}
+      <hr>
+      {% endfor %}
+{% endblock %}
+
+
+
