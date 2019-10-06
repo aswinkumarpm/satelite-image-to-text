@@ -9,12 +9,21 @@ use pip install -r requirement.tx to install libraries including django.
 First you should install binary:
 On Linux
 sudo apt update
+
 sudo apt install tesseract-ocr
+
 sudo apt install libtesseract-dev
+
+
 On Mac
+
 brew install tesseract
+
 On Windows
-download binary from https://github.com/UB-Mannheim/tesseract/wiki. then add pytesseract.pytesseract.tesseract_cmd = 'C:\Program Files (x86)\Tesseract-OCR\tesseract.exe' to your script.
+
+download binary from https://github.com/UB-Mannheim/tesseract/wiki. 
+
+then add pytesseract.pytesseract.tesseract_cmd = 'C:\Program Files (x86)\Tesseract-OCR\tesseract.exe' to your script.
 
 Then you should install python package using pip:
 pip install tesseract
